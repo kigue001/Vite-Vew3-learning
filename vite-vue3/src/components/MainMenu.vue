@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 defineProps<{ msg: string }>()
 
@@ -9,8 +9,8 @@ const count = ref(0)
 <template>
   <aside class="sidebar">
     <div class="sidebar-head">
-      <a href="/" class="logo-wrapper" title="Home"></a>
-      <button class=""></button>
+      <a href="/" class="logo-wrapper" title="Home">{{ msg }}</a>
+      <button class="" @click="">이동</button>
     </div>
     <div class="sidebar-body">
 
@@ -21,6 +21,6 @@ const count = ref(0)
   </aside>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

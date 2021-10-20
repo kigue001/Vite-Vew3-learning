@@ -1,13 +1,24 @@
 <script setup lang="ts">
-import MenuSidebar from './views/MenuSidebar.vue';
-import MainWrapper from './views/MainWrapper.vue';
+import MainMenu from '@/components/MainMenu.vue';
+import MainHeader from '@/components/MainHeader.vue';
+import MainFooter from '@/components/MainFooter.vue';
 </script>
 
 <template>
-  <MenuSidebar/>
-  <MainWrapper/>
+  <MainMenu />
+  <div class="main-wrapper">
+    <MainHeader />
+   
+    <main class="main">
+      
+    </main>
+
+    <MainFooter />
+  </div>
 </template>
 
-<style>
-
+<style lang="scss">
+  @import "@/assets/scss/common";
+  @import "bootstrap/scss/bootstrap";
+  @import "sweetalert2/src/sweetalert2.scss";
 </style>
