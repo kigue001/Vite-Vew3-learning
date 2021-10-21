@@ -1,14 +1,13 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-
+import router from './router';
 
 /* https://itnext.io/vue-tricks-smart-layouts-for-vuejs-5c61a472b69b
  * 레이아웃 만드는 법 설명 잘나와 있음
  * 레이아웃 잘 활용하면 생산성 높아짐
+ * 
+ * https://www.vuemastery.com/blog/vue-router-a-tutorial-for-vue-3/
  */
-
-// 공통 SCSS(라이브러리 SCSS 포함)
-import './_main.scss';
 
 // 부트스트랩5
 import 'bootstrap';
@@ -29,4 +28,5 @@ createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
     .component('font-awesome-layers', FontAwesomeLayers)
     .component('font-awesome-layers-text', FontAwesomeLayersText)
+    .use(router)
     .mount('#app');
