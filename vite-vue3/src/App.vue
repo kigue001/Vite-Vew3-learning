@@ -7,6 +7,7 @@ import MainFooter from '@components/MainFooter.vue';
 
 // function move() {
 //   Router.push('/user/admin');
+// 시험중 
 // }
 </script>
 
