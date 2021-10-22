@@ -12,7 +12,15 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*":["./src/"]
+=======
+      "@assets/*":["./src/assets/*"],
+      "@components/*":["./src/components/*"],
+      "@layouts/*":["./src/layouts/*"],
+      "@routers/*":["./src/routers/*"],
+      "@views/*":["./src/views/*"],
+>>>>>>> 408ec3d149b52410943aba57c77f4283b2f7f63d
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

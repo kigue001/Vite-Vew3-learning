@@ -7,6 +7,7 @@ const count = ref(0)
 </script>
 
 <template>
+<<<<<<< HEAD
   <h1>{{ msg }}</h1>
 
   <p>
@@ -49,4 +50,11 @@ code {
   border-radius: 4px;
   color: #304455;
 }
+=======
+  <h5>Login</h5>
+</template>
+
+<style scoped lang="scss">
+
+>>>>>>> 408ec3d149b52410943aba57c77f4283b2f7f63d
 </style>
