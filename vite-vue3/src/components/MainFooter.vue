@@ -12,10 +12,6 @@ const count = ref(0)
   </footer>
 </template>
 
-<<<<<<< HEAD
-<style lang="scss" scoped>
-=======
 <style scoped lang="scss">
->>>>>>> 408ec3d149b52410943aba57c77f4283b2f7f63d
 
 </style>
