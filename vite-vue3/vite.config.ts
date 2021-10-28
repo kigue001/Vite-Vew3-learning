@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,10 +10,10 @@ export default defineConfig({
       { find: '@layouts', replacement: '/src/layouts' },
       { find: '@routers', replacement: '/src/routers' },
       { find: '@views', replacement: '/src/views' },
-    ]
+    ],
   },
   plugins: [vue()],
-  server:{
-    port: 3000
-  }
-})
+  server: {
+    port: 3000,
+  },
+});

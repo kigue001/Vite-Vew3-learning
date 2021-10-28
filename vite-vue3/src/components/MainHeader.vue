@@ -12,18 +12,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
-
+  import { ref, reactive } from 'vue';
 </script>
 
 <style scoped lang="scss">
-.sidebar-view-icon{
-    transform:rotate(90deg);
-    -moz-transform: scaleX(-1); 
-    -o-transform: scaleX(-1); 
-    -webkit-transform: scaleX(-1); 
-    transform: scaleX(-1);   
+  .sidebar-view-icon {
+    transform: rotate(90deg);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     filter: FlipH;
-    -ms-filter: "FlipH";
-}
+    -ms-filter: 'FlipH';
+  }
 </style>
