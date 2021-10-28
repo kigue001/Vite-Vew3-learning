@@ -16,7 +16,7 @@
       "@components/*":["./src/components/*"],
       "@layouts/*":["./src/layouts/*"],
       "@routers/*":["./src/routers/*"],
-      "@views/*":["./src/views/*"],
+      "@views/*":["./src/views/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
