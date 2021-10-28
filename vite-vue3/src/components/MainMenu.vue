@@ -16,18 +16,15 @@
           </router-link>
         </li>
         <li class="menu-cat">
-          <a class="btn-cat-show collapsed" data-bs-toggle="collapse" href="#colMenu" role="button" aria-expanded="false" aria-controls="colMenu">
-            <font-awesome-icon :icon="['fas', 'envelope']" class="fa-lg icon" />
-            Posts
-            <span class="icon-right">
-              <span class="icon menu-icon"></span>
-            </span>
-          </a>
-          <ul class="cat-sub-menu collapse" id="colMenu">
-            <li>
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <font-awesome-icon :icon="['fas', 'home']" class="fa-lg icon" />
+            <span> Ac Item #1 </span>
+          </button>
+          <ul class="sidebar-body-menu-cat" id="accordionExample">
+            <li id="collapseOne" class="collapse" data-bs-parent="#accordionExample">
               <router-link :to="{ name: 'Home' }">Home</router-link>
             </li>
-            <li>
+            <li id="collapseOne" class="collapse" data-bs-parent="#accordionExample">
               <router-link :to="{ name: 'Login' }">Login</router-link>
             </li>
           </ul>
@@ -53,7 +50,6 @@
   ol,
   ul {
     list-style-type: none;
-    //
   }
 
   .sidebar {
@@ -71,34 +67,62 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background-color: #0061f7 !important;
-    width: 253px;
+    background-color: #198754 !important;
+    width: 250px;
     padding: 20px 15px 37px 20px;
+    min-height: 100vh;
     -webkit-transition: width 0.35s ease;
     -moz-transition: width 0.35s ease;
     -o-transition: width 0.35s ease;
     transition: width 0.35s ease;
-    min-height: 100vh;
+
+    a {
+      text-decoration: none;
+    }
+
+    &-head {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &-body {
+      margin-bottom: auto;
+
+      &-menu {
+        padding: 0;
+
+        a {
+          position: relative;
+          padding: 8px 0;
+          opacity: 0.6;
+          color: #fff;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 2.43;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
-  .sidebar a {
-    text-decoration: none;
-  }
-
-  .sidebar-head {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  .accordion-button {
+    padding: 0;
+    color: #fff;
+    background-color: #198754;
   }
 
   .logo-wrapper {
@@ -123,11 +147,6 @@
     object-fit: contain;
   }
 
-  .sidebar-body {
-    margin-bottom: auto;
-  }
-
-  .sidebar-body-menu a,
   .sidebar-user,
   .sidebar-user-img,
   .sidebar-user-info {
@@ -139,28 +158,6 @@
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-  }
-
-  .sidebar-body-menu {
-    padding: 0;
-  }
-
-  .sidebar-body-menu a:hover {
-    opacity: 1;
-  }
-
-  .sidebar-body-menu a {
-    position: relative;
-    padding: 8px 0;
-    opacity: 0.6;
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 2.43;
-  }
-
-  .icon {
-    margin-right: 12px;
   }
 
   .btn-cat-show.a > .icon {
@@ -180,25 +177,6 @@
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-  }
-
-  .menu-icon {
-    width: auto;
-    margin-right: 3px;
-    transition: all 0.3s ease;
-  }
-
-  .menu-icon::before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f100';
-  }
-
-  .btn-cat-show.collapsed .menu-icon {
-    transform: rotate(0);
-  }
-
-  .btn-cat-show .menu-icon {
-    transform: rotate(-90deg);
+    margin-right: 12px;
   }
 </style>
