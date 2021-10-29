@@ -3,20 +3,20 @@
 .page-flex,
 .sidebar-user-img picture,
 .users-table picture {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main-wrapper {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .main-nav--bg {
-    -webkit-transition: all .3s;
-    -moz-transition: width 0.35s ease;
-    -o-transition: all .3s;
-    transition: all .3s;
-    background-color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: width 0.35s ease;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #fff;
 }

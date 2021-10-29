@@ -11,13 +11,12 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
-    "types": ["vite/client"],
     "paths": {
-      "@assets/*":["./src/assets/*"],
-      "@components/*":["./src/components/*"],
-      "@layouts/*":["./src/layouts/*"],
-      "@routers/*":["./src/routers/*"],
-      "@views/*":["./src/views/*"]
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@routers/*": ["./src/routers/*"],
+      "@views/*": ["./src/views/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
