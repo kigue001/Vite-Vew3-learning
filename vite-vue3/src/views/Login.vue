@@ -1,14 +1,14 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
-  <h5>Login</h5>
+  <layout-default>
+    <template v-slot:main>
+      <h5>Login</h5>
+    </template>
+  </layout-default>
 </template>
+
+<script setup lang="ts">
+  import LayoutDefault from '@layouts/LayoutDefault.vue';
+</script>
 
 <style scoped lang="scss">
 

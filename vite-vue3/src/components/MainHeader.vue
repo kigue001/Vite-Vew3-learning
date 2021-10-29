@@ -1,6 +1,6 @@
 <template>
   <nav class="main-nav--bg">
-    <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colSide" aria-expanded="true" aria-controls="colSide">
+    <button class="btn btn-outline-secondary btn-sidebar-toggle" type="button" data-toggle="collapse" data-target="#collapseSidebar" aria-expanded="true" aria-controls="collapseSidebar">
       <font-awesome-icon :icon="['fas', 'indent']" class="sidebar-view-icon" />
     </button>
     <div class="container main-nav">test</div>
@@ -16,13 +16,12 @@
 </script>
 
 <style scoped lang="scss">
+  .btn-sidebar-toggle:active {
+    color: #0d6efd;
+    transition: all 0s;
+  }
   .sidebar-view-icon {
-    transform: rotate(90deg);
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: 'FlipH';
+    transform: rotate(180deg);
+    transition: all 0.35s ease;
   }
 </style>
