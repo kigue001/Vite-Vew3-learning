@@ -1,4 +1,4 @@
-const routeViews: any[] = [
+const routeViews = [
   {
     path: '/:catchAll(.*)',
     name: 'NotFound',
