@@ -55,13 +55,14 @@
 
   onMounted(() => {
 
-    // 이벤트 핸들러 - 메뉴 카테고리 자동 펼침
-    document.querySelectorAll('a.router-link-exact-active').forEach((e: Element) => {
-      let btnMenuCat: any = e.parentNode?.parentNode?.previousSibling;
+    // 이벤트 핸들러 - 메뉴 카테고리 자동 펼침(비동기)
+    const listActive: NodeListOf<Element> = document.querySelectorAll('a.router-link-exact-active');
+    for (let key of listActive) {
+      let btnMenuCat: any = key.parentNode?.parentNode?.previousSibling;
       if (btnMenuCat) {
         btnMenuCat.click();
       }
-    });
+    }
 
   });
 </script>
@@ -91,10 +92,6 @@
     min-height: 100vh;
     width: 250px;
     padding: 20px 15px 37px 20px;
-    -webkit-transition: width 0.35s ease;
-    -moz-transition: width 0.35s ease;
-    -o-transition: width 0.35s ease;
-    transition: width 0.35s ease;
 
     a {
       text-decoration: none;
