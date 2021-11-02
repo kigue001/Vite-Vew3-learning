@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
+import store from './store';
 
 /* https://itnext.io/vue-tricks-smart-layouts-for-vuejs-5c61a472b69b
  * 레이아웃 만드는 법 설명 잘나와 있음
@@ -27,10 +28,13 @@ import {
 } from '@fortawesome/vue-fontawesome';
 library.add(fas, fab, far);
 
+console.log(import.meta.env.VUE_APP_API_URL);
+
 createApp(App)
   // 폰트 어썸
   .component('font-awesome-icon', FontAwesomeIcon)
   .component('font-awesome-layers', FontAwesomeLayers)
   .component('font-awesome-layers-text', FontAwesomeLayersText)
   .use(router)
+  .use(store)
   .mount('#app');

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2015",
     "useDefineForClassFields": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
@@ -15,7 +15,8 @@
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@routers/*": ["./src/routers/*"],
+      "@router/*": ["./src/router/*"],
+      "@store/*": ["./src/store/*"],
       "@views/*": ["./src/views/*"]
     }
   },

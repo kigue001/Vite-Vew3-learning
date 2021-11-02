@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar collapse show" id="collapseSidebar">
+  <aside class="sidebar sidebar-collapse show" id="collapseSidebar">
     <div class="sidebar-head">
       <a href="/" class="logo-wrapper" title="Home">
         <span class="logo"></span>
@@ -233,5 +233,21 @@
       display: flex;
       margin-left: auto;
     }
+  }
+
+  .sidebar-collapse {
+    transition: all 0.35s ease;
+    visibility: visible;
+
+    &:not(.show) {
+      visibility: hidden;
+      width: 0vh;
+      height: 100%;
+      padding: 0;
+    }
+  }
+
+  .sidebar-collapsing {
+    width: 60vh;
   }
 </style>
