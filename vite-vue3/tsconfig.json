@@ -2,23 +2,27 @@
   "compilerOptions": {
     "target": "ES2015",
     "useDefineForClassFields": true,
-    "module": "commonjs",
+    "module": "ESNext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "importHelpers": true,
     "lib": ["ES2015", "ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./src/assets/*"],
+      "@scss/*": ["./src/assets/scss/*"],
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@routers/*": ["./src/routers/*"],
+      "@router/*": ["./src/router/*"],
+      "@store/*": ["./src/store/*"],
       "@views/*": ["./src/views/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["./src/**/*.ts", "./src/**/*.vue"],
   "exclude": ["node_modules", ".vscode"]
 }
