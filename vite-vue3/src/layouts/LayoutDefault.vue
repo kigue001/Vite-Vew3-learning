@@ -3,7 +3,7 @@
   <div class="main-wrapper">
     <MainHeader />
     <main class="main">
-        <slot name="main"></slot>
+      <slot name="main"></slot>
     </main>
     <MainFooter />
   </div>
@@ -15,6 +15,5 @@
   import MainFooter from '@components/MainFooter.vue';
 </script>
 
-<style scoped lang="scss">
 
-</style>
+<style scoped lang="scss"></style>

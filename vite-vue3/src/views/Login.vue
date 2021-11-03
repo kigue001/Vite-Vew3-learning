@@ -5,13 +5,15 @@
         <span>Login</span>
       </div>
       <div class="card-body">
-        <form v-on:submit.prevent="onSubmit()">
+
+        <form @submit.prevent="onSubmit()">
           <div class="form-floating mb-3">
-            <input type="text" id="idUser" class="form-control" placeholder="이용자 ID" />
+            <input id="idUser" type="text" class="form-control" placeholder="이용자 ID" />
             <label for="idUser" class="form-label"> 이용자 ID </label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" id="noPassWord" class="form-control" placeholder="Password" />
+            <input id="noPassWord" type="password" class="form-control" placeholder="Password" />
+
             <label for="noPassWord" class="form-label"> 비밀번호 </label>
           </div>
           <div class="form-check mb-3">
@@ -33,7 +35,8 @@
 
   const router = useRouter();
   const route = useRoute();
-  function onSubmit(): void {
+
+  function onSubmit() {
     router.push({ name: 'Home' });
     // console.log('test');
     // axios.get('http://localhost:5000/todos').then((response: any) => {

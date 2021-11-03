@@ -9,10 +9,13 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "importHelpers": true,
     "lib": ["ES2015", "ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
+    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./src/assets/*"],
+      "@scss/*": ["./src/assets/scss/*"],
       "@components/*": ["./src/components/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@router/*": ["./src/router/*"],
@@ -20,6 +23,6 @@
       "@views/*": ["./src/views/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["./src/**/*.ts", "./src/**/*.vue"],
   "exclude": ["node_modules", ".vscode"]
 }

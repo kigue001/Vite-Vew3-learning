@@ -6,14 +6,16 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@assets', replacement: '/src/assets' },
+      { find: '@scss', replacement: '/src/assets/scss' },
       { find: '@components', replacement: '/src/components' },
       { find: '@layouts', replacement: '/src/layouts' },
-      { find: '@routers', replacement: '/src/routers' },
+      { find: '@router', replacement: '/src/router' },
+      { find: '@store', replacement: '/src/store' },
       { find: '@views', replacement: '/src/views' },
     ],
   },
   plugins: [vue()],
   server: {
-    port: 3000,
+    port: process.env.VITE_PORT,
   },
 });
