@@ -5,6 +5,7 @@
         <span>Login</span>
       </div>
       <div class="card-body">
+
         <form @submit.prevent="onSubmit()">
           <div class="form-floating mb-3">
             <input id="idUser" type="text" class="form-control" placeholder="이용자 ID" />
@@ -12,6 +13,7 @@
           </div>
           <div class="form-floating mb-3">
             <input id="noPassWord" type="password" class="form-control" placeholder="Password" />
+
             <label for="noPassWord" class="form-label"> 비밀번호 </label>
           </div>
           <div class="form-check mb-3">
@@ -33,6 +35,7 @@
 
   const router = useRouter();
   const route = useRoute();
+
   function onSubmit() {
     router.push({ name: 'Home' });
     // console.log('test');

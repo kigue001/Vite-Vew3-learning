@@ -15,4 +15,5 @@
   import MainFooter from '@components/MainFooter.vue';
 </script>
 
+
 <style scoped lang="scss"></style>
