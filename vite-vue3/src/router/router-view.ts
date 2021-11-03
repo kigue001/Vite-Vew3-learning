@@ -1,5 +1,3 @@
-interface router {}
-
 const routeViews = [
   {
     path: '/:catchAll(.*)',

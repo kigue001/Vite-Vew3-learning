@@ -1,15 +1,15 @@
 import { PERSON } from '../mutation-types';
 
 const state = {
-    name: '',
-    age: 0,
-}
+  name: '',
+  age: 0,
+};
 
 const getters = {
-    personInfo: (state: any) => {
-        return `이름 : ${state.name}, 나이 : ${state.age}`;
-    }
-}
+  personInfo: (state: any) => {
+    return `이름 : ${state.name}, 나이 : ${state.age}`;
+  },
+};
 
 // const actions = {
 //     changeName({ commit: any }, name: any){
@@ -18,15 +18,15 @@ const getters = {
 // }
 
 const mutations = {
-    [PERSON.SET_NAME](state: any, name: any) {
-        state.name = name;
-    }
-}
+  [PERSON.SET_NAME](state: any, name: any) {
+    state.name = name;
+  },
+};
 
 export default {
-    namespaced: true,
-    state,
-    getters,
-    // actions,
-    mutations
-}
+  namespaced: true,
+  state,
+  getters,
+  // actions,
+  mutations,
+};
