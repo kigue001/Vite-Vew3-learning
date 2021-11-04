@@ -3,7 +3,7 @@
   <div class="main-wrapper">
     <MainHeader />
     <main class="main">
-      <slot name="main"></slot>
+      <router-view />
     </main>
     <MainFooter />
   </div>

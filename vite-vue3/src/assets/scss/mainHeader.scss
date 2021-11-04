@@ -1,0 +1,22 @@
+.btn-sidebar-toggle:active {
+  color: #0d6efd;
+  transition: all 0s;
+}
+
+.sidebar-view-icon {
+  transition: all 0.35s ease;
+}
+
+button[aria-expanded='true'],
+button:not(.sidebar-collapsed) {
+  & .sidebar-view-icon {
+    transform: rotate(180deg);
+  }
+}
+
+button[aria-expanded='false'],
+button.sidebar-collapsed {
+  & .sidebar-view-icon {
+    transform: rotate(0deg);
+  }
+}
