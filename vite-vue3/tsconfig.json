@@ -11,7 +11,7 @@
     "esModuleInterop": true,
     "importHelpers": true,
     "lib": ["ES2015", "ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "vite-plugin-pages/client", "vite-plugin-vue-layouts/client"],
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["./src/assets/*"],
@@ -23,6 +23,6 @@
       "@views/*": ["./src/views/*"]
     }
   },
-  "include": ["./src/**/*.ts", "./src/**/*.vue"],
-  "exclude": ["node_modules", ".vscode"]
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "./src/**/*.vue"],
+  "exclude": ["node_modules"]
 }

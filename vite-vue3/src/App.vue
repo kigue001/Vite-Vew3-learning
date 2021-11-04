@@ -1,10 +1,8 @@
 <template>
-  <!-- 바이트 페이지 레이아웃 교체 예정 -->
   <router-view />
 </template>
 
-<script setup lang="ts"></script>
-
+<!-- eslint-disable-next-line vue-scoped-css/enforce-style-type -->
 <style lang="scss">
-  @import '@assets/scss/main.scss';
+  @import '@scss/main.scss';
 </style>
