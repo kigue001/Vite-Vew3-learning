@@ -50,7 +50,7 @@
           </button>
           <ul class="menu-cat-group">
             <li id="collapse1" class="menu-item collapse" data-bs-parent="#menuGroup">
-              <router-link :to="{ name: 'Home' }">Home</router-link>
+              <router-link :to="{ name: 'Home2' }">Home2</router-link>
             </li>
             <li id="collapse1" class="menu-item collapse" data-bs-parent="#menuGroup">
               <router-link :to="{ name: 'Login' }">Login</router-link>
@@ -79,5 +79,5 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import "@scss/mainMenu.scss";
+@import "@scss/main_menu.scss";
 </style>

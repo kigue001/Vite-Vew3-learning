@@ -24,8 +24,6 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome';
 library.add(fas, fab, far);
 
-console.log(import.meta.env.VITE_APP_API_URL);
-
 createApp(App)
   // 폰트 어썸
   .component('font-awesome-icon', FontAwesomeIcon)
