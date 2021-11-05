@@ -1,4 +1,4 @@
-<template>
+<template v-slot="main">
   <main class="container-fluid d-flex justify-content-center align-items-center">
     <div class="card shadow" style="width: 500px">
       <div class="card-header">
@@ -29,19 +29,27 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import axios from 'axios';
+import axios from '@router/axios-api';
+import { createNamespacedHelpers } from 'vuex';
+
+const personHelper = createNamespacedHelpers('person');
+
+computed(() => {
+  personHelper.mapState({
+    message: state => state.message;
+  })
+});
 
 const router = useRouter();
 const route = useRoute();
 
 function onSubmit(): void {
-  router.push({ name: 'Home' });
-  // console.log('test');
-  // axios.get('http://localhost:5000/todos').then((response: any) => {
-  //   console.log(response);
-  // });
+  axios.get('/todos').then((response: any) => {
+    console.log(response);
+    router.push({ name: 'Home' });
+  });
 }
 </script>
 

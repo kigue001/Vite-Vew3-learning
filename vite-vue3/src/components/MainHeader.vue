@@ -33,5 +33,5 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import "@scss/mainHeader.scss";
+@import "@scss/main_header.scss";
 </style>

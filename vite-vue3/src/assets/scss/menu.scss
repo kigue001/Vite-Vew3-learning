@@ -174,9 +174,10 @@ ul {
     width: 0vh;
     height: 100%;
     padding: 0;
-  }
-}
 
-.sidebar-collapsing {
-  width: 60vh;
+    & a,
+    & button {
+      display: none;
+  }
+  }
 }
