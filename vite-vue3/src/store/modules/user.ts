@@ -1,32 +1,35 @@
-import { PERSON } from '../mutation-types';
+import { Module, ActionContext } from 'vuex';
 
-const state = {
-  name: '',
-  age: 0,
-};
+export interface User {
+  name: string;
+  age: number;
+}
 
-const getters = {
-  personInfo: (state: any) => {
-    return `이름 : ${state.name}, 나이 : ${state.age}`;
-  },
-};
+// state로 사용할 클래스
+export class State implements User {
+  name: string = '';
+  age: number = 0;
+}
 
-// const actions = {
-//     changeName({ commit: any }, name: any){
-//         commit(PERSON.SET_NAME, name);
-//     },
-// }
-
-const mutations = {
-  [PERSON.SET_NAME](state: any, name: any) {
-    state.name = name;
-  },
-};
-
-export default {
+// module간 state, getters, mutations, actions 따로 관리 가능하다.
+const UserModule: Module<State, any> = {
   namespaced: true,
-  state,
-  getters,
-  // actions,
-  mutations,
+  state: new State(),
+  getters: {
+    doubleCount(state: State): number {
+      return state.age;
+    },
+  },
+  mutations: {
+    increment(state: State, step: number): void {
+      state.age += step;
+    },
+  },
+  actions: {
+    incrementIfOddOnRootSum(state: ActionContext<State, any>, step: number): void {
+      state.commit(`increment`, step);
+    },
+  },
 };
+
+export default UserModule;
