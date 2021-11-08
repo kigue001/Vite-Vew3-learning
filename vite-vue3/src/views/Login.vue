@@ -33,14 +33,12 @@
 import { ref, computed } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import axios from '@router/axios-api';
-import { createNamespacedHelpers } from 'vuex';
+import { useStore } from 'vuex';
 
-const personHelper = createNamespacedHelpers('person');
+const store = useStore();
 
 computed(() => {
-  personHelper.mapState({
-    message: state => state.message;
-  })
+  store.state.User.age
 });
 
 const router = useRouter();
