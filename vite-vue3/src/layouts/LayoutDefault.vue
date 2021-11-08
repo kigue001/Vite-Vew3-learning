@@ -10,10 +10,10 @@
 </template>
 
 <script setup lang="ts">
-  import MainMenu from '@components/MainMenu.vue';
-  import MainHeader from '@components/MainHeader.vue';
-  import MainFooter from '@components/MainFooter.vue';
+import MainMenu from '@components/MainMenu.vue';
+import MainHeader from '@components/MainHeader.vue';
+import MainFooter from '@components/MainFooter.vue';
 </script>
 
-
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>
